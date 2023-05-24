@@ -45,6 +45,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'addAnime',
           path: '/addAnime',
           builder: (context, params) => AddAnimeWidget(),
+        ),
+        FFRoute(
+          name: 'getAnimes',
+          path: '/getAnimes',
+          builder: (context, params) => GetAnimesWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       urlPathStrategy: UrlPathStrategy.path,
