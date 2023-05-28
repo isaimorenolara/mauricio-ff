@@ -50,6 +50,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'getAnimes',
           path: '/getAnimes',
           builder: (context, params) => GetAnimesWidget(),
+        ),
+        FFRoute(
+          name: 'viewAnimes',
+          path: '/viewAnimes',
+          builder: (context, params) => ViewAnimesWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       urlPathStrategy: UrlPathStrategy.path,
