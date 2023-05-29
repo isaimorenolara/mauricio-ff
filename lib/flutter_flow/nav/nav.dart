@@ -65,6 +65,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Inicio',
           path: '/inicio',
           builder: (context, params) => InicioWidget(),
+        ),
+        FFRoute(
+          name: 'IniciarCrearCuenta',
+          path: '/iniciarCrearCuenta',
+          builder: (context, params) => IniciarCrearCuentaWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       urlPathStrategy: UrlPathStrategy.path,

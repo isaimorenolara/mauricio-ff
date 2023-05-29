@@ -148,10 +148,10 @@ class _InicioWidgetState extends State<InicioWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 15.0, 0.0, 0.0),
                           child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
+                            onPressed: () async {
+                              context.pushNamed('IniciarCrearCuenta');
                             },
-                            text: 'Iniciar Sesión',
+                            text: 'Empezar',
                             options: FFButtonOptions(
                               width: 270.0,
                               height: 70.0,
@@ -170,39 +170,6 @@ class _InicioWidgetState extends State<InicioWidget> {
                               elevation: 4.0,
                               borderSide: BorderSide(
                                 color: Colors.transparent,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(16.0),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 15.0, 0.0, 0.0),
-                          child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: 'Registrarse',
-                            options: FFButtonOptions(
-                              width: 270.0,
-                              height: 70.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .displaySmall
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    color: Color(0xDBFFFFFF),
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                              elevation: 4.0,
-                              borderSide: BorderSide(
-                                color: Color(0x004B39EF),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(16.0),
