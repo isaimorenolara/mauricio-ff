@@ -60,6 +60,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'editAnime',
           path: '/editAnime',
           builder: (context, params) => EditAnimeWidget(),
+        ),
+        FFRoute(
+          name: 'Inicio',
+          path: '/inicio',
+          builder: (context, params) => InicioWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       urlPathStrategy: UrlPathStrategy.path,
